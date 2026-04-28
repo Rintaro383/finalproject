@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CR7 | Cristiano Ronaldo</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+  <noscript>Please enable JavaScript for full experience.</noscript>
+
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">CR7</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="early-life.html">Early Life</a></li>
+      <li><a href="2000s.html">Pro–2000s</a></li>
+      <li><a href="2000-2010.html">2000–2010</a></li>
+      <li><a href="2010-2020.html">2010–2020</a></li>
+      <li><a href="2020-present.html">2020–Now</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main id="main">
+
+    <section class="hero">
+      <div>
+        <span class="eyebrow">The Legend</span>
+        <h1>Cristiano Ronaldo</h1>
+        <p>From the streets of Madeira to the greatest stages in football history.</p>
+        <a href="#eras" class="btn">Explore His Story</a>
+        <button class="btn" id="siuu-btn" onclick="document.getElementById('siuu-audio').play()" style="margin-left:0.5rem;">
+          ▶ Play Siuuu!
+        </button>
+        <audio id="siuu-audio" src="audio/siuu.mp3"></audio>
+      </div>
+      <div>
+        <iframe
+          width="100%"
+          height="250"
+          src="https://www.youtube.com/embed/6rIHOdckoQw"
+          title="Ronaldo Siuu"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num" data-count="969">0</span>
+            <span class="stat-label">Career Goals</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="5">0</span>
+            <span class="stat-label">Ballon d'Or</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="35">0</span>
+            <span class="stat-label">Major Trophies</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="eras" id="eras">
+      <h2>Explore His Career</h2>
+      <p class="section-sub">Follow Ronaldo's journey through each era</p>
+      <div class="era-grid">
+        <a href="early-life.html" class="era-card">
+          <span class="era-year">～2003</span>
+          <h3>Early Life</h3>
+          <p>From Madeira to Sporting CP</p>
+        </a>
+        <a href="2000s.html" class="era-card">
+          <span class="era-year">2003–2009</span>
+          <h3>Pro – 2000s</h3>
+          <p>Manchester United years</p>
+        </a>
+        <a href="2000-2010.html" class="era-card">
+          <span class="era-year">2000–2010</span>
+          <h3>The Decade</h3>
+          <p>First Ballon d'Or, world record transfer</p>
+        </a>
+        <a href="2010-2020.html" class="era-card">
+          <span class="era-year">2010–2020</span>
+          <h3>Real Madrid Era</h3>
+          <p>4 Champions Leagues, 4 Ballon d'Ors</p>
+        </a>
+        <a href="2020-present.html" class="era-card">
+          <span class="era-year">2020–Now</span>
+          <h3>The Final Chapter</h3>
+          <p>Juventus, Man United, Al Nassr</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="profile" id="profile">
+      <h2>Player Profile</h2>
+      <div class="profile-grid">
+        <div>
+          <table>
+            <thead>
+              <tr><th colspan="2">Cristiano Ronaldo — Basic Info</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Full Name</td><td>Cristiano Ronaldo dos Santos Aveiro</td></tr>
+              <tr><td>Born</td><td>February 5, 1985 — Madeira, Portugal</td></tr>
+              <tr><td>Height</td><td>187 cm</td></tr>
+              <tr><td>Position</td><td>Forward</td></tr>
+              <tr><td>Nationality</td><td>Portuguese</td></tr>
+              <tr><td>Current Club</td><td>Al Nassr</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <blockquote>
+            <p>Ronaldo has scored 969 career goals as of April 2026, making him the all-time top scorer in football history.</p>
+            <cite>Career Stats</cite>
+          </blockquote>
+          <figure>
+            <img src="images/ronaldo.jpg" alt="Cristiano Ronaldo" />
+            <figcaption>Cristiano Ronaldo — Career record goal scorer</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <div class="back-top">
+      <a href="#main">↑ Back to Top</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>CR7 Tribute · Created by Rintaro Sato ·
+      <a href="https://en.wikipedia.org/wiki/Cristiano_Ronaldo" target="_blank" rel="noopener">Wikipedia ↗</a>
+    </p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
