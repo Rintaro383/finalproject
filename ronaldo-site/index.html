@@ -1,16 +1,23 @@
 <!DOCTYPE html>
+<!-- index.html - Home Page - CR7 Cristiano Ronaldo Tribute Website -->
 <html lang="en">
 <head>
+  <!-- Required meta tags -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CR7 | Cristiano Ronaldo</title>
+  <!-- External stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
+  <!-- Accessibility: skip link for keyboard users -->
   <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- noscript: shown when JavaScript is disabled -->
   <noscript>Please enable JavaScript for full experience.</noscript>
 
+  <!-- Navigation: consistent across all pages -->
   <nav id="navbar">
     <a href="index.html" class="nav-logo">CR7</a>
     <ul class="nav-links">
@@ -21,6 +28,7 @@
       <li><a href="2010-2020.html">2010–2020</a></li>
       <li><a href="2020-present.html">2020–Now</a></li>
     </ul>
+    <!-- Hamburger button for mobile navigation -->
     <button class="hamburger" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -28,18 +36,10 @@
 
   <main id="main">
 
+    <!-- Hero Section: intro with video and stats -->
     <section class="hero">
       <div>
-        <span class="eyebrow">The Legend</span>
-        <h1>Cristiano Ronaldo</h1>
-        <p>From the streets of Madeira to the greatest stages in football history.</p>
-        <a href="#eras" class="btn">Explore His Story</a>
-        <button class="btn" id="siuu-btn" onclick="document.getElementById('siuu-audio').play()" style="margin-left:0.5rem;">
-          ▶ Play Siuuu!
-        </button>
-        <audio id="siuu-audio" src="audio/siuu.mp3"></audio>
-      </div>
-      <div>
+        <!-- YouTube video embed using iframe -->
         <iframe
           width="100%"
           height="250"
@@ -49,6 +49,7 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
         </iframe>
+        <!-- Career stats with JavaScript counter animation -->
         <div class="hero-stats">
           <div class="stat">
             <span class="stat-num" data-count="969">0</span>
@@ -64,11 +65,25 @@
           </div>
         </div>
       </div>
+      <div>
+        <span class="eyebrow">The Legend</span>
+        <h1>Cristiano Ronaldo</h1>
+        <p>From the streets of Madeira to the greatest stages in football history.</p>
+        <!-- Internal anchor link -->
+        <a href="#eras" class="btn">Explore His Story</a>
+        <!-- Audio button: plays Siuuu sound using JavaScript onclick -->
+        <button class="btn" id="siuu-btn" onclick="document.getElementById('siuu-audio').play()" style="margin-left:0.5rem;">
+          ▶ Play Siuuu!
+        </button>
+        <audio id="siuu-audio" src="audio/siuu.mp3"></audio>
+      </div>
     </section>
 
+    <!-- Era Cards Section: links to each career era page -->
     <section class="eras" id="eras">
       <h2>Explore His Career</h2>
       <p class="section-sub">Follow Ronaldo's journey through each era</p>
+      <!-- CSS Grid layout for era cards -->
       <div class="era-grid">
         <a href="early-life.html" class="era-card">
           <span class="era-year">～2003</span>
@@ -98,10 +113,13 @@
       </div>
     </section>
 
+    <!-- Player Profile Section: table and image -->
     <section class="profile" id="profile">
       <h2>Player Profile</h2>
+      <!-- CSS Grid: two column layout -->
       <div class="profile-grid">
         <div>
+          <!-- Table with thead, tbody, and colspan -->
           <table>
             <thead>
               <tr><th colspan="2">Cristiano Ronaldo — Basic Info</th></tr>
@@ -117,10 +135,12 @@
           </table>
         </div>
         <div>
+          <!-- Blockquote with cite -->
           <blockquote>
             <p>Ronaldo has scored 969 career goals as of April 2026, making him the all-time top scorer in football history.</p>
             <cite>Career Stats</cite>
           </blockquote>
+          <!-- Figure with figcaption for accessibility -->
           <figure>
             <img src="images/ronaldo.jpg" alt="Cristiano Ronaldo" />
             <figcaption>Cristiano Ronaldo — Career record goal scorer</figcaption>
@@ -129,18 +149,21 @@
       </div>
     </section>
 
+    <!-- Anchor link: back to top of page -->
     <div class="back-top">
       <a href="#main">↑ Back to Top</a>
     </div>
 
   </main>
 
+  <!-- Footer with external link to Wikipedia -->
   <footer>
     <p>CR7 Tribute · Created by Rintaro Sato ·
       <a href="https://en.wikipedia.org/wiki/Cristiano_Ronaldo" target="_blank" rel="noopener">Wikipedia ↗</a>
     </p>
   </footer>
 
+  <!-- External JavaScript file -->
   <script src="js/main.js"></script>
 </body>
 </html>
