@@ -1,16 +1,23 @@
 <!DOCTYPE html>
+<!-- 2020-present.html - 2020 to Present Page - CR7 Cristiano Ronaldo Tribute Website -->
 <html lang="en">
 <head>
+  <!-- Required meta tags -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CR7 | 2020–Now</title>
+  <!-- External stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
+  <!-- Accessibility: skip link for keyboard users -->
   <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- noscript: shown when JavaScript is disabled -->
   <noscript>Please enable JavaScript for full experience.</noscript>
 
+  <!-- Navigation: consistent across all pages -->
   <nav id="navbar">
     <a href="index.html" class="nav-logo">CR7</a>
     <ul class="nav-links">
@@ -21,6 +28,7 @@
       <li><a href="2010-2020.html">2010–2020</a></li>
       <li><a href="2020-present.html" class="active">2020–Now</a></li>
     </ul>
+    <!-- Hamburger button for mobile navigation -->
     <button class="hamburger" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -28,24 +36,29 @@
 
   <main id="main">
 
+    <!-- Page hero section -->
     <header class="page-hero">
       <span class="page-hero-era">Chapter 5</span>
       <h1>2020 – Present</h1>
       <p>Still scoring, still the best.</p>
     </header>
 
+    <!-- Section: Back to Manchester United -->
     <section class="page-section">
       <h2>Back to Manchester United</h2>
+      <!-- CSS Grid: two column layout -->
       <div class="two-col">
         <div>
           <p>In <strong>2021</strong>, Ronaldo left Juventus and returned to <strong>Manchester United</strong>. He scored <strong>27 goals</strong> in his return season.</p>
           <p>However the team did not perform well overall. In <strong>2022</strong>, he left United by mutual agreement.</p>
+          <!-- Blockquote with cite -->
           <blockquote>
             <p>Ronaldo became the all-time top international goal scorer in 2021, surpassing Ali Daei's record of 109 goals for Iran.</p>
             <cite>International Record</cite>
           </blockquote>
         </div>
         <div>
+          <!-- Figure with figcaption and alt attribute -->
           <figure>
             <img src="images/return-utd.jpg" alt="Cristiano Ronaldo returning to Manchester United in 2021" />
             <figcaption>2021 — Ronaldo returns to Old Trafford</figcaption>
@@ -54,10 +67,13 @@
       </div>
     </section>
 
+    <!-- Section: Al Nassr -->
     <section class="page-section">
       <h2>Al Nassr — Saudi Arabia</h2>
+      <!-- CSS Grid: two column layout -->
       <div class="two-col">
         <div>
+          <!-- Figure with figcaption -->
           <figure>
             <img src="images/al-nassr.jpg" alt="Cristiano Ronaldo playing for Al Nassr" />
             <figcaption>Ronaldo at Al Nassr — still breaking records</figcaption>
@@ -67,6 +83,7 @@
           <p>In <strong>January 2023</strong>, Ronaldo joined <strong>Al Nassr</strong> in Saudi Arabia. He kept scoring goals at a high level.</p>
           <p>As of April 2026, he has scored <strong>969 career goals</strong> — the most in football history.</p>
 
+          <!-- Unordered list with nested list -->
           <h3>Recent Achievements</h3>
           <ul class="content-list">
             <li><strong>2021</strong> — Returned to Manchester United
@@ -83,8 +100,10 @@
       </div>
     </section>
 
+    <!-- Section: Career Stats and Contact Form -->
     <section class="page-section">
       <h2>Career Stats</h2>
+      <!-- Table with thead and tbody -->
       <table>
         <thead>
           <tr>
@@ -100,20 +119,24 @@
         </tbody>
       </table>
 
+      <!-- Contact Form: validated with JavaScript -->
       <h2 style="margin-top: 2.5rem;">Leave a Message</h2>
       <p>Have a question or comment about CR7?</p>
 
       <form id="contact-form" class="contact-form">
+        <!-- Text input -->
         <div class="form-group">
           <label for="name">Your Name</label>
           <input type="text" id="name" placeholder="Enter your name" />
           <span class="error" id="name-error"></span>
         </div>
+        <!-- Email input -->
         <div class="form-group">
           <label for="email">Your Email</label>
           <input type="email" id="email" placeholder="Enter your email" />
           <span class="error" id="email-error"></span>
         </div>
+        <!-- Select dropdown -->
         <div class="form-group">
           <label for="topic">Favorite Era</label>
           <select id="topic">
@@ -125,11 +148,13 @@
           </select>
           <span class="error" id="topic-error"></span>
         </div>
+        <!-- Textarea -->
         <div class="form-group">
           <label for="message">Your Message</label>
           <textarea id="message" rows="4" placeholder="Write your message here..."></textarea>
           <span class="error" id="msg-error"></span>
         </div>
+        <!-- Checkbox -->
         <div class="form-group">
           <label>
             <input type="checkbox" id="agree" />
@@ -137,12 +162,15 @@
           </label>
           <span class="error" id="agree-error"></span>
         </div>
+        <!-- Submit button -->
         <button type="submit" class="btn">Send Message</button>
+        <!-- Success message shown by JavaScript after valid submission -->
         <div id="form-success" style="display:none; color:green; margin-top:1rem; font-weight:bold;">
           Message sent! Thank you!
         </div>
       </form>
 
+      <!-- Page navigation buttons -->
       <div class="page-nav">
         <a href="2010-2020.html" class="btn">← Previous</a>
         <a href="index.html" class="btn">Back to Home →</a>
@@ -151,12 +179,14 @@
 
   </main>
 
+  <!-- Footer with external link -->
   <footer>
     <p>CR7 Tribute · Created by Rintaro Sato ·
       <a href="https://en.wikipedia.org/wiki/Cristiano_Ronaldo" target="_blank" rel="noopener">Wikipedia ↗</a>
     </p>
   </footer>
 
+  <!-- External JavaScript file -->
   <script src="js/main.js"></script>
 </body>
 </html>
