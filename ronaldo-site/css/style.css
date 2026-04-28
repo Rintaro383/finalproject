@@ -1,11 +1,16 @@
-/* ===== RESET ===== */
+/* ===================================================
+   style.css - Main Stylesheet
+   CR7 Cristiano Ronaldo Tribute Website
+   =================================================== */
+
+/* ===== RESET: remove default browser styles ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== VARIABLES ===== */
+/* ===== CSS VARIABLES: color and size settings ===== */
 :root {
   --gold: #c9a84c;
   --black: #080808;
@@ -17,7 +22,7 @@
   --nav-height: 60px;
 }
 
-/* ===== BASE ===== */
+/* ===== BASE STYLES ===== */
 body {
   background-color: var(--black);
   color: var(--text);
@@ -26,15 +31,23 @@ body {
   line-height: 1.6;
 }
 
+/* Heading sizes */
 h1 { font-size: 2rem; margin-bottom: 0.8rem; }
 h2 { font-size: 1.5rem; margin-bottom: 0.8rem; color: var(--gold); }
 h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
 p { margin-bottom: 0.8rem; }
+
+/* Link styles */
 a { color: var(--gold); text-decoration: none; }
 a:hover { text-decoration: underline; }
+
+/* Responsive images */
 img { max-width: 100%; display: block; margin-bottom: 0.5rem; }
 
-/* ===== SKIP LINK ===== */
+/* ===== ACCESSIBILITY: skip link for keyboard users ===== */
+/* Feature: allows keyboard users to skip navigation
+   Why: improves accessibility for screen reader users
+   How it improves UX: faster navigation without mouse */
 .skip-link {
   position: absolute;
   top: -100px;
@@ -47,7 +60,7 @@ img { max-width: 100%; display: block; margin-bottom: 0.5rem; }
 }
 .skip-link:focus { top: 0; }
 
-/* ===== NAV ===== */
+/* ===== NAVIGATION: fixed top navbar ===== */
 #navbar {
   background: var(--dark);
   border-bottom: 2px solid var(--gold);
@@ -62,24 +75,28 @@ img { max-width: 100%; display: block; margin-bottom: 0.5rem; }
   justify-content: space-between;
 }
 
+/* Nav logo */
 .nav-logo {
   color: var(--gold);
   font-size: 1.5rem;
   font-weight: bold;
 }
 
+/* Nav links list */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 0.3rem;
 }
 
+/* Nav link styles */
 .nav-links a {
   color: var(--text-muted);
   padding: 0.3rem 0.7rem;
   font-size: 0.9rem;
 }
 
+/* Pseudo-class selector: hover and active states */
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--gold);
@@ -88,6 +105,7 @@ img { max-width: 100%; display: block; margin-bottom: 0.5rem; }
   text-decoration: none;
 }
 
+/* Hamburger button for mobile */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -103,20 +121,22 @@ img { max-width: 100%; display: block; margin-bottom: 0.5rem; }
   display: block;
 }
 
-/* ===== MAIN ===== */
+/* ===== MAIN CONTENT: offset for fixed nav ===== */
 main { padding-top: var(--nav-height); }
 
-/* ===== HERO ===== */
+/* ===== HERO SECTION ===== */
 .hero {
   background: var(--dark);
   border-bottom: 1px solid var(--gray);
   padding: 3rem 2rem;
+  /* CSS Grid: two column layout */
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: center;
 }
 
+/* Eyebrow text above heading */
 .eyebrow {
   font-size: 0.85rem;
   color: var(--gold);
@@ -128,14 +148,17 @@ main { padding-top: var(--nav-height); }
 .hero h1 { color: white; }
 .hero p { color: var(--text-muted); }
 
+/* Hero stats with left border */
 .hero-stats {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   border-left: 2px solid var(--gold);
   padding-left: 2rem;
+  margin-top: 1rem;
 }
 
+/* Stat number (animated by JavaScript) */
 .stat-num {
   font-size: 2.5rem;
   font-weight: bold;
@@ -143,12 +166,14 @@ main { padding-top: var(--nav-height); }
   display: block;
 }
 
+/* Stat label */
 .stat-label {
   font-size: 0.75rem;
   color: var(--text-muted);
   text-transform: uppercase;
 }
 
+/* Button styles */
 .btn {
   display: inline-block;
   background: var(--gold);
@@ -163,7 +188,7 @@ main { padding-top: var(--nav-height); }
 }
 .btn:hover { opacity: 0.85; text-decoration: none; }
 
-/* ===== ERAS ===== */
+/* ===== ERA CARDS SECTION ===== */
 .eras {
   padding: 2.5rem 2rem;
   max-width: 1000px;
@@ -172,6 +197,7 @@ main { padding-top: var(--nav-height); }
 
 .section-sub { color: var(--text-muted); margin-bottom: 1.2rem; }
 
+/* CSS Grid: three column layout for era cards */
 .era-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -179,6 +205,7 @@ main { padding-top: var(--nav-height); }
   margin-top: 1rem;
 }
 
+/* Era card styles */
 .era-card {
   border: 1px solid var(--gray);
   border-top: 3px solid var(--gold);
@@ -192,13 +219,14 @@ main { padding-top: var(--nav-height); }
 .era-card h3 { font-size: 1rem; margin-bottom: 0.3rem; color: white; }
 .era-card p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
 
-/* ===== PROFILE ===== */
+/* ===== PROFILE SECTION ===== */
 .profile {
   padding: 2.5rem 2rem;
   max-width: 1000px;
   margin: 0 auto;
 }
 
+/* CSS Grid: two column layout */
 .profile-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -207,16 +235,17 @@ main { padding-top: var(--nav-height); }
   align-items: start;
 }
 
-/* ===== TABLE ===== */
+/* ===== TABLE STYLES ===== */
 table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
 thead { background: var(--gold); }
 thead th { padding: 0.7rem; color: var(--black); text-align: left; font-size: 0.9rem; }
 tbody tr { border-bottom: 1px solid var(--gray); }
+/* Pseudo-class: hover effect on table rows */
 tbody tr:hover { background: var(--dark-card); }
 tbody td { padding: 0.6rem 0.7rem; font-size: 0.9rem; }
 tbody td:first-child { color: var(--gold); font-weight: bold; }
 
-/* ===== BLOCKQUOTE ===== */
+/* ===== BLOCKQUOTE STYLES ===== */
 blockquote {
   border-left: 3px solid var(--gold);
   padding: 0.8rem 1rem;
@@ -226,12 +255,13 @@ blockquote {
 blockquote p { font-style: italic; margin: 0; color: var(--text); }
 blockquote cite { font-size: 0.85rem; color: var(--gold); display: block; margin-top: 0.3rem; }
 
-/* ===== FIGURE ===== */
+/* ===== FIGURE AND IMAGE STYLES ===== */
 figure { margin: 1rem 0; }
 figure img { border: 1px solid var(--gray); }
 figcaption { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem; }
 
-/* ===== TWO COLUMN ===== */
+/* ===== TWO COLUMN LAYOUT ===== */
+/* CSS Grid: used on all content pages */
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -240,10 +270,10 @@ figcaption { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem; }
   align-items: start;
 }
 
-/* ===== BACK TO TOP ===== */
+/* ===== BACK TO TOP LINK ===== */
 .back-top { text-align: center; padding: 1.5rem; }
 
-/* ===== FOOTER ===== */
+/* ===== FOOTER STYLES ===== */
 footer {
   background: var(--dark);
   border-top: 1px solid var(--gold);
@@ -254,7 +284,7 @@ footer {
 }
 footer a { color: var(--gold); }
 
-/* ===== PAGE HERO ===== */
+/* ===== PAGE HERO: used on sub-pages ===== */
 .page-hero {
   background: var(--dark);
   border-bottom: 2px solid var(--gold);
@@ -265,7 +295,7 @@ footer a { color: var(--gold); }
 .page-hero p { color: var(--text-muted); margin-top: 0.4rem; }
 .page-hero-era { color: var(--gold); font-size: 0.85rem; display: block; margin-bottom: 0.3rem; }
 
-/* ===== PAGE SECTIONS ===== */
+/* ===== PAGE SECTION: content area on sub-pages ===== */
 .page-section {
   padding: 2.5rem 2rem;
   max-width: 1000px;
@@ -273,7 +303,7 @@ footer a { color: var(--gold); }
 }
 .page-section h2 { margin-bottom: 1rem; }
 
-/* ===== LISTS ===== */
+/* ===== LIST STYLES ===== */
 .content-list { list-style: none; margin: 0.8rem 0; }
 .content-list > li {
   padding: 0.4rem 0 0.4rem 1.2rem;
@@ -281,14 +311,15 @@ footer a { color: var(--gold); }
   position: relative;
   font-size: 0.95rem;
 }
+/* Pseudo-element: custom bullet point */
 .content-list > li::before { content: '- '; position: absolute; left: 0; color: var(--gold); }
 .content-list ul, .content-list ol { padding-left: 1.2rem; margin-top: 0.3rem; }
 .content-list ul li, .content-list ol li { font-size: 0.85rem; color: var(--text-muted); border: none; padding: 0.2rem 0; }
 
-/* ===== PAGE NAV ===== */
+/* ===== PAGE NAVIGATION BUTTONS ===== */
 .page-nav { display: flex; justify-content: space-between; margin-top: 2rem; }
 
-/* ===== FORM ===== */
+/* ===== CONTACT FORM STYLES ===== */
 .contact-form { max-width: 500px; margin-top: 1.2rem; }
 .form-group { margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.3rem; }
 .form-group label { font-weight: bold; font-size: 0.9rem; color: var(--gold); }
@@ -302,21 +333,30 @@ footer a { color: var(--gold); }
   background: var(--dark-card);
   color: var(--text);
 }
+/* Pseudo-class: focus state for form fields */
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus { outline: 2px solid var(--gold); }
 .error { color: #ff4444; font-size: 0.8rem; }
 
-/* ===== FOCUS ===== */
+/* ===== ACCESSIBILITY: focus outline ===== */
+/* Feature: visible focus for keyboard navigation
+   Why: helps keyboard users see which element is focused
+   How it improves UX: meets WCAG accessibility standards */
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE DESIGN: media queries ===== */
+/* Feature: adapts layout for smaller screens
+   Why: site must work on mobile devices
+   How it improves UX: no horizontal scrolling on phones */
 @media (max-width: 768px) {
+  /* Stack hero to single column on mobile */
   .hero {
     grid-template-columns: 1fr;
     padding: 2rem 1rem;
     padding-top: 3rem;
   }
+  /* Change stats to horizontal row on mobile */
   .hero-stats {
     flex-direction: row;
     border-left: none;
@@ -324,10 +364,13 @@ footer a { color: var(--gold); }
     padding-left: 0;
     padding-top: 1rem;
   }
+  /* Two column grid becomes two on tablet */
   .era-grid { grid-template-columns: 1fr 1fr; }
+  /* Stack all two column layouts on mobile */
   .two-col { grid-template-columns: 1fr; }
   .profile-grid { grid-template-columns: 1fr; }
   .eras, .profile, .page-section { padding: 1.5rem 1rem; }
+  /* Mobile navigation: hidden by default, shown when open */
   .nav-links {
     display: none;
     position: absolute;
@@ -339,10 +382,13 @@ footer a { color: var(--gold); }
     padding: 0.8rem 1.5rem;
     border-bottom: 1px solid var(--gold);
   }
+  /* Show nav when hamburger is clicked (JavaScript adds open class) */
   .nav-links.open { display: flex; }
+  /* Show hamburger button on mobile */
   .hamburger { display: flex; }
 }
 
+/* Extra small screens */
 @media (max-width: 500px) {
   .era-grid { grid-template-columns: 1fr; }
   h1 { font-size: 1.5rem; }
