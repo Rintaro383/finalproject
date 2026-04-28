@@ -39,6 +39,18 @@
     <!-- Hero Section: intro with video and stats -->
     <section class="hero">
       <div>
+        <span class="eyebrow">The Legend</span>
+        <h1>Cristiano Ronaldo</h1>
+        <p>From the streets of Madeira to the greatest stages in football history.</p>
+        <!-- Internal anchor link -->
+        <a href="#eras" class="btn">Explore His Story</a>
+        <!-- Audio button: plays Siuuu sound using JavaScript onclick -->
+        <button class="btn" id="siuu-btn" onclick="document.getElementById('siuu-audio').play()" style="margin-left:0.5rem;">
+          ▶ Play Siuuu!
+        </button>
+        <audio id="siuu-audio" src="audio/siuu.mp3"></audio>
+      </div>
+      <div>
         <!-- YouTube video embed using iframe -->
         <iframe
           width="100%"
@@ -64,18 +76,6 @@
             <span class="stat-label">Major Trophies</span>
           </div>
         </div>
-      </div>
-      <div>
-        <span class="eyebrow">The Legend</span>
-        <h1>Cristiano Ronaldo</h1>
-        <p>From the streets of Madeira to the greatest stages in football history.</p>
-        <!-- Internal anchor link -->
-        <a href="#eras" class="btn">Explore His Story</a>
-        <!-- Audio button: plays Siuuu sound using JavaScript onclick -->
-        <button class="btn" id="siuu-btn" onclick="document.getElementById('siuu-audio').play()" style="margin-left:0.5rem;">
-          ▶ Play Siuuu!
-        </button>
-        <audio id="siuu-audio" src="audio/siuu.mp3"></audio>
       </div>
     </section>
 
