@@ -1,16 +1,23 @@
 <!DOCTYPE html>
+<!-- early-life.html - Early Life Page - CR7 Cristiano Ronaldo Tribute Website -->
 <html lang="en">
 <head>
+  <!-- Required meta tags -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CR7 | Early Life</title>
+  <!-- External stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
+  <!-- Accessibility: skip link for keyboard users -->
   <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- noscript: shown when JavaScript is disabled -->
   <noscript>Please enable JavaScript for full experience.</noscript>
 
+  <!-- Navigation: consistent across all pages -->
   <nav id="navbar">
     <a href="index.html" class="nav-logo">CR7</a>
     <ul class="nav-links">
@@ -21,6 +28,7 @@
       <li><a href="2010-2020.html">2010–2020</a></li>
       <li><a href="2020-present.html">2020–Now</a></li>
     </ul>
+    <!-- Hamburger button for mobile navigation -->
     <button class="hamburger" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -28,25 +36,30 @@
 
   <main id="main">
 
+    <!-- Page hero section -->
     <header class="page-hero">
       <span class="page-hero-era">Chapter 1</span>
       <h1>Early Life</h1>
       <p>From Madeira to the world stage.</p>
     </header>
 
+    <!-- Section: Born in Madeira -->
     <section class="page-section">
       <h2>Born in Madeira</h2>
+      <!-- CSS Grid: two column layout -->
       <div class="two-col">
         <div>
           <p>Cristiano Ronaldo was born on <strong>February 5, 1985</strong> in Funchal, Madeira, Portugal. He was the youngest of four children.</p>
           <p>His family was poor. His father worked as a gardener. His mother worked as a cook. They lived in a very small house.</p>
           <p>Even as a young boy, Ronaldo loved football. He played every day in the streets of Madeira.</p>
+          <!-- Blockquote with cite -->
           <blockquote>
             <p>Ronaldo left Madeira at age 12 to join the Sporting CP academy in Lisbon — alone.</p>
             <cite>Early Career Fact</cite>
           </blockquote>
         </div>
         <div>
+          <!-- Figure with figcaption and alt attribute for accessibility -->
           <figure>
             <img src="images/madeira.jpg" alt="The island of Madeira, Portugal, where Ronaldo was born" />
             <figcaption>Madeira, Portugal — Ronaldo's birthplace</figcaption>
@@ -55,10 +68,13 @@
       </div>
     </section>
 
+    <!-- Section: Youth Football -->
     <section class="page-section">
       <h2>Youth Football</h2>
+      <!-- CSS Grid: two column layout -->
       <div class="two-col">
         <div>
+          <!-- Figure with figcaption -->
           <figure>
             <img src="images/sporting.jpg" alt="Sporting CP academy" />
             <figcaption>Sporting CP Academy — where Ronaldo trained as a youth player</figcaption>
@@ -67,6 +83,7 @@
         <div>
           <p>Ronaldo started playing for <strong>Andorinha</strong> at age 7. Then he moved to <strong>Nacional</strong>. At age 12, he joined the academy of <strong>Sporting CP</strong> in Lisbon.</p>
 
+          <!-- Unordered list with nested list -->
           <h3>His Youth Clubs</h3>
           <ul class="content-list">
             <li>Andorinha — age 7 to 10
@@ -79,6 +96,7 @@
             <li>Sporting CP Academy — age 12 to 18</li>
           </ul>
 
+          <!-- Ordered list -->
           <h3>Top 3 Youth Moments</h3>
           <ol class="content-list">
             <li>Scored many goals at Andorinha</li>
@@ -89,11 +107,13 @@
       </div>
     </section>
 
+    <!-- Section: First Pro Game -->
     <section class="page-section">
       <h2>First Pro Game</h2>
       <p>In <strong>2003</strong>, Ronaldo played his first professional game for Sporting CP. He was only 17 years old. He was so good that Manchester United wanted to sign him right away.</p>
       <p>He signed for Manchester United for <strong>£12 million</strong> — a record fee for a teenager at that time.</p>
 
+      <!-- Table with thead, tbody, and colspan -->
       <table>
         <thead>
           <tr><th colspan="3">Ronaldo's Youth Career</th></tr>
@@ -105,6 +125,7 @@
         </tbody>
       </table>
 
+      <!-- Page navigation buttons -->
       <div class="page-nav">
         <span></span>
         <a href="2000s.html" class="btn">Next: Pro – 2000s →</a>
@@ -113,12 +134,14 @@
 
   </main>
 
+  <!-- Footer with external link -->
   <footer>
     <p>CR7 Tribute · Created by Rintaro Sato ·
       <a href="https://en.wikipedia.org/wiki/Cristiano_Ronaldo" target="_blank" rel="noopener">Wikipedia ↗</a>
     </p>
   </footer>
 
+  <!-- External JavaScript file -->
   <script src="js/main.js"></script>
 </body>
 </html>
